@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>methods of DOM Part 1</title>
+</head>
+
+<body>
+    <!-- DOM (Document Object Model) -->
+
+    <!-- id -->
+    <p id="one">Namaste <span>hello</span></p>
+    
+    <!-- class -->
+    <ul>
+        <li class="tech">Two</li>
+        <li class="tech">Three</li>
+    </ul>
+
+    <!-- tag name -->
+    <h4>Hey</h4>
+    <h4>Namaste</h4>
+    <h4>Hello</h4>
+
+    <!-- query selector -->
+    <h2>Hello</h2>
+    <h2 class="cls">Holla</h2>
+    <h2 id="ids">Hoy</h2>
+
+
+    <script>
+        // Id
+        let var1 = document.getElementById("one");
+        console.log(var1.innerText);
+        console.log(var1.innerHTML);
+
+        // class
+        let var2 = document.getElementsByClassName("tech");
+        console.log(var2[1].innerText);
+        var2[1].innerText = "Nodejs"
+
+        // tag name
+        let var3 = document.getElementsByTagName("h4");
+        console.log(var3[1].innerHTML);
+        var3[2].innerText = "Hello Pw Skill";
+
+        var3[2].style.color = "red";
+
+        // query selector
+        let var4 = document.querySelector(".cls");
+        console.log(var4);
+
+        // var4.className = "hello";
+        // var4.classList = "helo hel hola";
+        // var4.setAttribute("id", "js");
+    </script>
+</body>
+</html>
